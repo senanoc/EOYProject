@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">EOYProject</string>
     <string name="action_settings">Settings</string>
+    <string name="button_nav">Navigate</string>
+    <string name="button_done">Done</string>
+    <string name="button_missed">Missed</string>
+    <string name="title_activity_route_detail">route_detail</string>
 </resources>
