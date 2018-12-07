@@ -5,4 +5,5 @@
     <string name="button_done">Done</string>
     <string name="button_missed">Missed</string>
     <string name="title_activity_route_detail">route_detail</string>
+    <string name="title_activity_routes_detail">RoutesDetailActivity</string>
 </resources>

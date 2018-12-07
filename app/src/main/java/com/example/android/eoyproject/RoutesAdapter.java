@@ -29,7 +29,7 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.RoutesView
 
         CollectionReference routesRef = FirebaseFirestore.getInstance().collection(Constants.COLLECTION_PATH);
 
-        routesRef.orderBy(Constants.KEY_RID, Query.Direction.DESCENDING).limit(50).addSnapshotListener(new EventListener<QuerySnapshot>() {
+        routesRef.orderBy(Constants.KEY_ORDER, Query.Direction.DESCENDING).limit(50).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                 if (e != null) {
@@ -55,7 +55,7 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.RoutesView
         DocumentSnapshot ds = mRoutesSnapshots.get(i);
         String name = (String) ds.get(Constants.KEY_NAME);
         String addr = (String) ds.get(Constants.KEY_ADDR);
-        String rid = (String) ds.get(Constants.KEY_RID);
+        String rid = (String) ds.get(Constants.KEY_ROUTE);
         String order = (String) ds.get(Constants.KEY_ORDER);
         routesViewHolder.mNameTextView.setText(name);
         routesViewHolder.mAddrTextView.setText(addr);
