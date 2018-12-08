@@ -16,7 +16,7 @@
         android:padding="6dp">
 
         <TextView
-            android:id="@+id/itemview_name"
+            android:id="@+id/itemview_custname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -25,7 +25,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/itemview_addr"
+            android:id="@+id/itemview_custaddr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"

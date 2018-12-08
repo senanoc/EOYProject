@@ -53,11 +53,12 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.RoutesView
     @Override
     public void onBindViewHolder(@NonNull RoutesViewHolder routesViewHolder, int i) {
         DocumentSnapshot ds = mRoutesSnapshots.get(i);
-        String name = (String) ds.get(Constants.KEY_NAME);
-        String addr = (String) ds.get(Constants.KEY_ADDR);
+        String custname = (String) ds.get(Constants.KEY_NAME);
+        String custaddr = (String) ds.get(Constants.KEY_ADDR);
 
-        routesViewHolder.mNameTextView.setText(name);
-        routesViewHolder.mAddrTextView.setText(addr);
+
+        routesViewHolder.mNameTextView.setText(custname);
+        routesViewHolder.mAddrTextView.setText(custaddr);
 
 
     }
@@ -75,8 +76,8 @@ public class RoutesAdapter extends RecyclerView.Adapter<RoutesAdapter.RoutesView
 
         public RoutesViewHolder(@NonNull View itemView) {
             super(itemView);
-            mNameTextView = itemView.findViewById(R.id.itemview_name);
-            mAddrTextView = itemView.findViewById(R.id.itemview_addr);
+            mNameTextView = itemView.findViewById(R.id.itemview_custname);
+            mAddrTextView = itemView.findViewById(R.id.itemview_custaddr);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

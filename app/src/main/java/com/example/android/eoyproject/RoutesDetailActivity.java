@@ -1,6 +1,7 @@
 package com.example.android.eoyproject;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,6 +25,8 @@ public class RoutesDetailActivity extends AppCompatActivity {
     private DocumentReference mDocRef;
     private TextView mNameTextView;
     private TextView mAddrTextView;
+    private double mLat;
+    private double mLon;
 
 
     @Override
@@ -37,6 +40,7 @@ public class RoutesDetailActivity extends AppCompatActivity {
 
 
         String docId = getIntent().getStringExtra(Constants.EXTRA_DOC_ID);
+
 
         mDocRef = FirebaseFirestore.getInstance().collection(Constants.COLLECTION_PATH).document(docId);
         mDocRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
@@ -52,6 +56,7 @@ public class RoutesDetailActivity extends AppCompatActivity {
                     mAddrTextView.setText((String)documentSnapshot.get(Constants.KEY_ADDR));
 
 
+
                 }
             }
         });
@@ -64,6 +69,17 @@ public class RoutesDetailActivity extends AppCompatActivity {
     }
 
     public void button_nav(View view) {
+
+        //TODO get coords from firebase
+
+        Uri gmmIntentUri = Uri.parse("google.navigation:q=52.54854,-8.7297");
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+        mapIntent.setPackage("com.google.android.apps.maps");
+        startActivity(mapIntent);
+
+
+
+
     }
 
     @Override
