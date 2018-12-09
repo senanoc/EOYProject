@@ -27,6 +27,9 @@
                 android:layout_height="wrap_content"
                 android:text="Customer:" />
 
+        </TableRow>
+        <TableRow>
+
             <TextView
                 android:id="@+id/detail_name"
                 android:layout_width="match_parent"
@@ -37,13 +40,15 @@
                 android:textSize="20sp" />
 
         </TableRow>
-
         <TableRow>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Address:" />
+
+        </TableRow>
+        <TableRow>
 
             <TextView
                 android:id="@+id/detail_addr"
@@ -55,34 +60,116 @@
                 android:textSize="20sp" />
 
         </TableRow>
-
         <TableRow>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".9"
                 android:onClick="button_complete"
                 android:text="@string/button_complete"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:background="@color/colorButton"
+                android:layout_marginRight="5dp"/>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".9"
                 android:onClick="button_missed"
                 android:text="@string/button_missed"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:background="@color/colorButton"/>
 
             <Button
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight=".9"
                 android:onClick="button_nav"
                 android:text="@string/button_nav"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:background="@color/colorButton"
+                android:layout_marginLeft="5dp"/>
 
         </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status:" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/detail_complete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add / Update Note:" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/detail_drivernote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </TableRow>
+        <TableRow>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".9"
+                android:onClick="button_save"
+                android:text="@string/button_save"
+                android:textSize="16sp"
+                android:background="@color/colorButton" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location:" />
+
+            <TextView
+                android:id="@+id/detail_lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/detail_lon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="12sp" />
+
+
+        </TableRow>
+
+
+
+
 
     </TableLayout>
 

@@ -4,6 +4,7 @@
     <string name="button_nav">Navigate</string>
     <string name="button_complete">Complete</string>
     <string name="button_missed">Missed</string>
+    <string name="button_save">Save + Return to list</string>
     <string name="title_activity_route_detail">route_detail</string>
     <string name="title_activity_routes_detail">Customer Detail</string>
 </resources>
