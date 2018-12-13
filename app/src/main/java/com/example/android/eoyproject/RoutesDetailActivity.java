@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -100,13 +101,7 @@ public class RoutesDetailActivity extends AppCompatActivity {
         startActivity(mapIntent);
 
     }
-    public static void resetRoutes() {
 
-        Map<String, Object> rt = new HashMap<>();
-        rt.put(Constants.KEY_COMPLETE, "".toString());
-        rt.put(Constants.KEY_NOTE, "".toString());
-        FirebaseFirestore.getInstance().collection(Constants.COLLECTION_PATH).document(get).update(rt);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

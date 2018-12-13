@@ -40,15 +40,6 @@ public class MainActivity extends AppCompatActivity {
         RoutesAdapter routeAdapter = new RoutesAdapter();
         recyclerView.setAdapter(routeAdapter);
 
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RoutesDetailActivity.resetRoutes();
-            }
-        });
     }
 
 
